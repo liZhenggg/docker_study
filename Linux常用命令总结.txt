@@ -1,0 +1,96 @@
+
+--[cd] 切换当前目录
+cd dirName 		切换到目录dirName
+cd ..				到上一次目录
+cd ../..        	到上上层目录
+cd ~				到用户主目录
+
+--[ls] 查看文件与目录
+
+--[mkdir] 创建文件夹
+mkdir dirName
+
+--[pwd] 查看当前工作目录路径
+
+--[touch] 创建文件和修改文件或者目录的时间戳
+touch fileName 		创建一个新文件
+
+--[rm] 删除文件或目录
+rm fileName			删除文件
+rm -r fileName		删除目录和其子文件
+
+--[mv] 移动文件、目录或更名
+mv oldName newName	文件改名
+mv oldDir newDir	将目录oldDIr中的所有文件移到newDir中（当前目录用.表示）
+
+--[cp] 复制文件
+cp dir/* . 复制一个目录下的所有文件到当前工作目录 
+cp /tmp/dir1 . 复制一个目录到当前工作目录 
+cp dir1 dir2 复制一个目录 
+
+--[ps] 查看当前运行的进程状态
+ps -ef 				显示当前所有进程环境变量及进程间关系
+ps -ef|grep PID 	PID找到是被哪个应用程序使用
+
+--[kill] 发送指定的信号到相应进程。不指定型号将发送SIGTERM（15）终止指定进程。若仍无法终止该程序，可使用SIGKILL(9)信息尝试强制删除程序。
+kill PID 			杀死进程PID
+kill -KILL PID 		强制杀死进程PID
+kill -9 PID 		彻底杀死进程PID
+
+--[cat] 文本输出
+1.cat fileName		显示整个文件
+2.cat  >  fileName	只能创建新文件,不能编辑已有文件
+3.cat file1 file2  > file3
+					几个文件合并为一个文件
+
+--[more] 文本输出
+more fileName		一页一页的显示文本
+->>常用操作命令：
+Enter	向下n行，需要定义，默认为1行
+Ctrl+F 	向下滚动一屏
+空格键	向下滚动一屏
+Ctrl+B	返回上一屏
+= 		输出当前行的行号
+
+--[less] 文本输出，可随意浏览文件
+
+--[head] 文本输出开头10行
+head fileName		输出文件的开头10行
+
+--[tail] 显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。
+常用参数：
+-f 循环读取（常用于查看递增的日志文件）
+-n<行数> 显示行数（从后向前）
+tail -f fileName 	显示文件尾部10行，动态刷新显示在屏幕上
+tail -n 20 fileName 显示文件尾部20行
+
+--[tar] 压缩和解压文件
+
+--[df] 显示磁盘空间使用情况
+df -l 				显示磁盘使用情况
+df -haT				以易读方式列出所有文件系统及其类型
+
+--[du] 查看文件和目录磁盘使用的空间
+
+--[date] 显示或设定系统的日期与时间
+
+
+VIM编辑器命令
+--[vim] 			直接启动vim
+vim fileName		打开vim并创建名为filename的文件
+vim file1 file2 ...
+				 	同时打开多个文件
+
+按ESC键跳到命令模式
+退出命令
+:w 保存文件但不退出vi 
+:w file 将修改另外保存到file中，不退出vi 
+:w! 强制保存，不退出vi 
+:wq 保存文件并退出vi 
+:wq! 强制保存文件，并退出vi 
+:q 不保存文件，退出vi 
+:q! 不保存文件，强制退出vi 
+:e! 放弃所有修改，从上次保存文件开始再编辑命令历史
+
+
+
